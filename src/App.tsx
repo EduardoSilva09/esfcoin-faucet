@@ -1,4 +1,12 @@
+import { mint } from './Web3Service'
 function App() {
+
+  function OnConnectMetamaskClick() {
+    mint()
+      .then(() => console.log())
+      .catch(err => alert(err.message))
+  }
+
   return (
     <div className="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
       <header className="mb-auto">
@@ -15,7 +23,7 @@ function App() {
         <h1>Get your ESFCoins</h1>
         <p className="lead">Once a day, earn 1.000 coins for free just connecting your MetaMask below.</p>
         <p className="lead">
-          <a href="#" className="btn btn-lg btn-light fw-bold border-white bg-white">
+          <a href="#" onClick={OnConnectMetamaskClick} className="btn btn-lg btn-light fw-bold border-white bg-white">
             <img src="/assets/metamask.svg" width={48} /> Connect MetaMask</a>
         </p>
       </main>
