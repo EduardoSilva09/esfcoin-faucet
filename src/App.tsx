@@ -3,7 +3,7 @@ function App() {
 
   function OnConnectMetamaskClick() {
     mint()
-      .then(() => console.log())
+      .then((tx) => alert(tx))
       .catch(err => alert(err.message))
   }
 
