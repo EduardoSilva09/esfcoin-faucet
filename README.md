@@ -32,7 +32,7 @@ This project implements a simple faucet for distributing [ESFCoins](https://gith
    
 ## Usage
 
-1. Compile the smart contracts
+1. Start the server
 
    ```sh
    npm start
