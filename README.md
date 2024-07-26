@@ -40,6 +40,18 @@ This project implements a simple faucet for distributing [ESFCoins](https://gith
 
 2. Open your web browser and go to `http://localhost:3000` to view the application.
 
+## Code Explanation
+
+- `useState` from React is used to manage state variables (`message` and `captcha`).
+- `OnConnectMetamaskClick` handles the logic for requesting tokens:
+  - Checks if the reCAPTCHA challenge has been completed.
+  - Calls `mint()` function to mint tokens upon successful validation.
+  - Updates `message` state based on the success or failure of the token minting process.
+
+## Components
+
+- `ReCAPTCHA` component from `react-google-recaptcha` is used to integrate reCAPTCHA v2 for bot detection.
+
 ## MetaMask Integration
 
 Ensure you have [MetaMask](https://metamask.io/) installed in your browser. Click on "Connect MetaMask" to interact with the faucet.
