@@ -9,7 +9,7 @@ function App() {
     setMessage("Requesting your tokens... Wait...");
     mint()
       .then((tx) => setMessage(`Your tokens were sent. Tr: ${tx}`))
-      .catch(err => setMessage(err.message))
+      .catch(err => setMessage(err.response ? err.response.data.message : err.message))
   }
 
   return (
@@ -26,10 +26,10 @@ function App() {
 
       <main className="px-3">
         <h1>Get your ESFCoins</h1>
-        <p className="lead">Once a day, earn 1.000 coins for free just connecting your MetaMask below.</p>
+        <p className="lead">Once a day, earn 10.000 coins for free just connecting your MetaMask below.</p>
         <p className="lead">
           <a href="#" onClick={OnConnectMetamaskClick} className="btn btn-lg btn-light fw-bold border-white bg-white">
-            <img src="/assets/metamask.svg" width={48} /> Connect MetaMask</a>
+            <img src="/assets/metamask.svg" width={48} /> Get Free Tokens</a>
         </p>
         <p className='lead'>
           {message}
